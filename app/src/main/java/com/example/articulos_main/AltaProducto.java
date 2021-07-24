@@ -54,7 +54,7 @@ public class AltaProducto extends AppCompatActivity {
                     if (!objetoValidar.isNumeric(codigopro) && !objetoValidar.isNumeric(preciopro)) {
                         Toast.makeText(this, "Introduzca un número , por favor", Toast.LENGTH_SHORT).show();
                     } else {
-                        mostrarDialogoConfirmacionalta(view);
+                        mostrarDialogoConfirmacionAlta(view);
                     }
 
                 }
@@ -63,7 +63,7 @@ public class AltaProducto extends AppCompatActivity {
             }
         }
 
-    public void mostrarDialogoConfirmacionalta(View view) {
+    public void mostrarDialogoConfirmacionAlta(View view) {
         DialogoConfirmacionAlta confirmacion  = new DialogoConfirmacionAlta();
         confirmacion.show(getFragmentManager(), "Cuadro confirmación alta");
     }

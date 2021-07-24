@@ -161,6 +161,12 @@
                 android:onClick="actualizarDato"
                 android:text="MODIFICAR" />
 
+            <TextView
+                android:id="@+id/txtResultadoModificar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp" />
+
             <Button
                 android:id="@+id/btn_salir_modificar"
                 android:layout_width="match_parent"

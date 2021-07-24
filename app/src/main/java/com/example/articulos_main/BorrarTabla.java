@@ -24,13 +24,13 @@ public class BorrarTabla extends AppCompatActivity {
 
 
     public void borrarTabla(View view) {
-        mostrarDialogoConfirmacionBorrado( view);
+        mostrarDialogoConfirmacionBorrarTabla( view);
     }
 
 
 
-    public void mostrarDialogoConfirmacionBorrado(View view) {
-        DialogoConfirmacionBorrado confirmacion  = new DialogoConfirmacionBorrado();
+    public void mostrarDialogoConfirmacionBorrarTabla(View view) {
+        DialogoConfirmacionBorradoTabla confirmacion  = new DialogoConfirmacionBorradoTabla();
         confirmacion.show(getFragmentManager(), "Cuadro confirmación borrado");
     }
 

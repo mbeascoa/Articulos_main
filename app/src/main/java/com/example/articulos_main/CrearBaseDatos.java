@@ -31,7 +31,7 @@ public class CrearBaseDatos extends AppCompatActivity {
                 ContentValues nuevoRegistro = new ContentValues();
                 nuevoRegistro.put("codigopro", 1);
                 nuevoRegistro.put("nombre", "Alicate");
-                nuevoRegistro.put("descripcion", "Herramienta para agarrar clavos, alambres sin romperse las manos");
+                nuevoRegistro.put("descripcion", "Herramienta para agarrar");
                 nuevoRegistro.put("precio", 10);
 
                 //Insertamos el registro en la base de datos
