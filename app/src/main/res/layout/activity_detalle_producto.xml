@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="DETALLES EMPLEADO" />
+        android:text="DETALLES DEL PRODUCTO" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -67,14 +67,14 @@
         android:paddingTop="8dp">
 
         <TextView
-            android:id="@+id/tv_apellidos_detalle"
+            android:id="@+id/tv_descripcion_detalle"
             android:layout_width="24dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Apellidos" />
+            android:text="Descripción" />
 
         <TextView
-            android:id="@+id/et_apellido_detalle"
+            android:id="@+id/et_descripcion_detalle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
@@ -89,120 +89,14 @@
         android:paddingTop="8dp">
 
         <TextView
-            android:id="@+id/tv_oficio_detalle"
-            android:layout_width="24dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Oficio" />
-
-        <TextView
-            android:id="@+id/et_oficio_detalle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingTop="8dp">
-
-        <TextView
-            android:id="@+id/tv_direccion_detalle"
-            android:layout_width="24dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Dirección" />
-
-        <TextView
-            android:id="@+id/et_direccion_detalle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#F4F2F2"
-        android:orientation="horizontal"
-        android:paddingTop="8dp">
-
-        <TextView
-            android:id="@+id/tv_salario_detalle"
+            android:id="@+id/tv_precio_detalle"
             android:layout_width="24dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Salario " />
 
         <TextView
-            android:id="@+id/et_salario_detalle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingTop="8dp">
-
-        <TextView
-            android:id="@+id/tv_comision_detalle"
-            android:layout_width="24dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Comision" />
-
-        <TextView
-            android:id="@+id/et_comision_detalle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#F4F2F2"
-        android:orientation="horizontal"
-        android:paddingTop="8dp">
-
-        <TextView
-            android:id="@+id/tv_numero_departamento_detalle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Número Departamento" />
-
-        <TextView
-            android:id="@+id/et_numdepartam_detalle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingTop="8dp">
-
-        <TextView
-            android:id="@+id/tv_fecha_alta_detalle"
-            android:layout_width="24dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Fecha Alta " />
-
-        <TextView
-            android:id="@+id/et_fechaalta_detalle"
+            android:id="@+id/et_precio_detalle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1" />

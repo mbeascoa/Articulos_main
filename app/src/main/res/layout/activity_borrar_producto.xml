@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:onClick="cerrarVentana"
     android:orientation="vertical"
-    tools:context=".BorrarEmpleado">
+    tools:context=".BorrarProducto">
 
     <TextView
         android:id="@+id/lbl_borrar_producto"

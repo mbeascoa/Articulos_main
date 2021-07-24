@@ -32,16 +32,15 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolder>  {
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        int codigoprod = listaProductos.get(position).getCodigoProd();
-        holder.txtnombre.setText(String.valueOf(codigoprod));
+        int codigopro = listaProductos.get(position).getCodigoProd();
+        holder.txtcodigo.setText(String.valueOf(codigopro));
 
-        String nombre = listaProductos.get(position).getNombre();
-        holder.txtapellido.setText(nombre);
+        String nomb = listaProductos.get(position).getNombre();
+        holder.txtnombre.setText(nomb);
 
-        String descripcion = listaProductos.get(position).getDescripcion();
-        holder.txtoficio.setText(descripcion);
-        int precio = listaProductos.get(position).getPrecio();
-        holder.txtsalario.setText(String.valueOf(precio));
+
+        int preci = listaProductos.get(position).getPrecio();
+        holder.txtprecio.setText(String.valueOf(preci));
 
         holder.cardview.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -72,14 +71,13 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolder>  {
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView txtnombre, txtapellido, txtoficio, txtsalario;
+        private TextView txtnombre, txtprecio, txtcodigo;
         private CardView cardview;
         public ViewHolder(View v) {
             super(v);
-            txtnombre = (TextView) v.findViewById(R.id.txtNombre);
-            txtapellido=(TextView) v.findViewById(R.id.txtapellido);
-            txtoficio=(TextView) v.findViewById(R.id.txtoficio);
-            txtsalario=(TextView) v.findViewById(R.id.txtsalario);
+            txtcodigo = (TextView) v.findViewById(R.id.txtCodigo);
+            txtnombre=(TextView) v.findViewById(R.id.txtNombre);
+            txtprecio=(TextView) v.findViewById(R.id.txtPrecioVariable);
             cardview = (CardView) v.findViewById(R.id.cv1);
 
         }

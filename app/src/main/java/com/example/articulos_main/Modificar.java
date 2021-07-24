@@ -12,7 +12,7 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Modificar extends AppCompatActivity {
-    private EditText consulxid,  nommod, apemod, ofimod, dirmod,salmod, commod,numdepmod, fechamod;
+    private EditText consulxid,  nommod, codmod, desmod, premod;
     private Button consultarxid, salir, modificar;
     private static final String TAG = Modificar.class.getSimpleName();
 
@@ -23,14 +23,11 @@ public class Modificar extends AppCompatActivity {
         setContentView(R.layout.activity_modificar);
         consulxid = (EditText) findViewById(R.id.et_modificar);
 
+        codmod = (EditText) findViewById(R.id.et_codigo_modificar);
         nommod = (EditText) findViewById(R.id.et_nombre_modificar);
-        apemod = (EditText) findViewById(R.id.et_apellido_modificar);
-        ofimod = (EditText) findViewById(R.id.et_descripcion_modificar);
-        dirmod = (EditText) findViewById(R.id.et_direccion_modificar);
-        salmod=(EditText)findViewById(R.id.et_salario_modificar);
-        commod = (EditText) findViewById(R.id.et_comision_modificar);
-        numdepmod = (EditText) findViewById(R.id.et_numero_departamento_modificar);
-        fechamod = (EditText) findViewById(R.id.et_fechamodificar);
+        desmod = (EditText) findViewById(R.id.et_descripcion_modificar);
+        premod = (EditText) findViewById(R.id.et_precio_modificar);
+
         consultarxid = (Button) findViewById(R.id.btn_consultarid_modificar);
         modificar = (Button) findViewById(R.id.btn_consultar_modificar);
         salir = (Button) findViewById(R.id.btn_salir_modificar);
@@ -46,18 +43,15 @@ public class Modificar extends AppCompatActivity {
 
 
             String[] args = new String[]{id};
-            String sql = "Select * from Empleados where codigoemp =?";
+            String sql = "Select * from Productos where codigopro =?";
             Cursor c = db.rawQuery(sql, args);
             c.moveToFirst();
 
+            codmod.setText(c.getString(c.getColumnIndexOrThrow("codigopro")));
             nommod.setText(c.getString(c.getColumnIndexOrThrow("nombre")));
-            apemod.setText(c.getString(c.getColumnIndexOrThrow("apellido")));
-            ofimod.setText(c.getString(c.getColumnIndexOrThrow("oficio")));
-            dirmod.setText(c.getString(c.getColumnIndexOrThrow("direccion")));
-            salmod.setText(c.getString(c.getColumnIndexOrThrow("salario")));
-            commod.setText(c.getString(c.getColumnIndexOrThrow("comision")));
-            numdepmod.setText(c.getString(c.getColumnIndexOrThrow("numerodepartamento")));
-            fechamod.setText(c.getString(c.getColumnIndexOrThrow("fechaalta")));
+            desmod.setText(c.getString(c.getColumnIndexOrThrow("descripcion")));
+            premod.setText(c.getString(c.getColumnIndexOrThrow("precio")));
+
             db.close();
         } catch (Exception e){
             Log.d(TAG, "ERROR: " + e.toString());
@@ -71,27 +65,21 @@ public class Modificar extends AppCompatActivity {
             String id = consulxid.getText().toString();
             BaseDatosHelper usdbh = new BaseDatosHelper(this, "DBTienda", null, 1);
             SQLiteDatabase db = usdbh.getWritableDatabase();
+            String cod = codmod.getText().toString();
             String nom = nommod.getText().toString();
-            String ape = apemod.getText().toString();
-            String ofi = ofimod.getText().toString();
-            String dir = dirmod.getText().toString();
-            String sal = salmod.getText().toString();
-            String com = commod.getText().toString();
-            String numdep = numdepmod.getText().toString();
-            String fecha = fechamod.getText().toString();
+            String des = desmod.getText().toString();
+            String pre = premod.getText().toString();
+
 
             ContentValues actualizaReg = new ContentValues();
+            actualizaReg.put("codigopro", cod);
             actualizaReg.put("nombre", nom);
-            actualizaReg.put("apellido", ape);
-            actualizaReg.put("oficio", ofi);
-            actualizaReg.put("direccion", dir);
-            actualizaReg.put("salario", sal);
-            actualizaReg.put("comision", com);
-            actualizaReg.put("numerodepartamento", numdep);
-            actualizaReg.put("fechaalta", fecha);
+            actualizaReg.put("descripcion", des);
+            actualizaReg.put("precio", pre);
+
             //Actualizamos el registroenla base de datos
             String[] args = new String[]{id};
-            db.update("Empleados", actualizaReg, "codigoemp =?", args);
+            db.update("Productos", actualizaReg, "codigopro =?", args);
 
 
             db.close();

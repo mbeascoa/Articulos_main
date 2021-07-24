@@ -7,7 +7,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class GestorProductos extends AppCompatActivity {
 
   private Button btncrear, btnconsultar, btnalta;
 
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void borrarempleado(View view){
-        Intent i = new Intent( this, BorrarEmpleado.class);
+        Intent i = new Intent( this, BorrarProducto.class);
         startActivity(i);
     }
     public void borrartabla(View view){

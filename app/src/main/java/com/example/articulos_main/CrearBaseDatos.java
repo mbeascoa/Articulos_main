@@ -14,7 +14,7 @@ public class CrearBaseDatos extends AppCompatActivity {
 
 
     private TextView resultado;
-    private static final String TAG = com.example.articulos_main.MainActivity.class.getSimpleName();
+    private static final String TAG = CrearBaseDatos.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,15 +29,10 @@ public class CrearBaseDatos extends AppCompatActivity {
 
             if (db != null) {
                 ContentValues nuevoRegistro = new ContentValues();
-                nuevoRegistro.put("codigoemp", 1);
-                nuevoRegistro.put("nombre", "Miguel");
-                nuevoRegistro.put("apellido", "Beascoa");
-                nuevoRegistro.put("oficio", "Ingeniero");
-                nuevoRegistro.put("direccion", "Arturo Soria");
-                nuevoRegistro.put("fechaalta", "10/12/2021");
-                nuevoRegistro.put("salario", 250000);
-                nuevoRegistro.put("comision", 2500);
-                nuevoRegistro.put("numerodepartamento", 10);
+                nuevoRegistro.put("codigopro", 1);
+                nuevoRegistro.put("nombre", "Alicate");
+                nuevoRegistro.put("descripcion", "Herramienta para agarrar clavos, alambres sin romperse las manos");
+                nuevoRegistro.put("precio", 10);
 
                 //Insertamos el registro en la base de datos
                 // primer registro de la base de datos, Productos

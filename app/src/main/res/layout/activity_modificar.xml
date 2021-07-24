@@ -75,12 +75,12 @@
                     android:text="Código" />
 
                 <EditText
-                    android:id="@+id/et_nombre_modificar"
+                    android:id="@+id/et_codigo_modificar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:inputType="textPersonName" />
+                    android:inputType="number" />
 
             </LinearLayout>
 
@@ -98,7 +98,7 @@
                     android:text="Nombre " />
 
                 <EditText
-                    android:id="@+id/et_apellido_modificar"
+                    android:id="@+id/et_nombre_modificar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -145,12 +145,12 @@
                     android:text="Precio" />
 
                 <EditText
-                    android:id="@+id/et_direccion_modificar"
+                    android:id="@+id/et_precio_modificar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:inputType="textPersonName" />
+                    android:inputType="number" />
 
             </LinearLayout>
 

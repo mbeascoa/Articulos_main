@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class ConsultaPorId extends AppCompatActivity {
     private EditText consulxid;
     private TextView nomcxi, codcxi, descxi,precxi;
-    private static final String TAG = com.example.articulos_main.MainActivity.class.getSimpleName();
+    private static final String TAG = ConsultaPorId.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

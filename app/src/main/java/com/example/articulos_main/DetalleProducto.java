@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class DetalleProducto extends AppCompatActivity {
 
     private static final String TAG = DetalleProducto.class.getSimpleName();
-    private TextView coddet, nomdet, apedet, ofidet, saldet, comdet, dirdet, fecdet, numdepdet;
+    private TextView coddet, nomdet, desdet, predet ;
 
 
     @Override
@@ -20,14 +20,11 @@ public class DetalleProducto extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalle_producto);
         coddet = (TextView) findViewById(R.id.et_codigo_detalle);
-         nomdet = (TextView) findViewById(R.id.et_nombre_detalle);
-         apedet = (TextView) findViewById(R.id.et_apellido_detalle);
-         ofidet= (TextView) findViewById(R.id.et_oficio_detalle);
-        saldet = (TextView) findViewById(R.id.et_salario_detalle);
-        comdet = (TextView) findViewById(R.id.et_comision_detalle);
-        dirdet= (TextView) findViewById(R.id.et_direccion_detalle);
-        fecdet = (TextView) findViewById(R.id.et_fechaalta_detalle);
-        numdepdet = (TextView) findViewById(R.id.et_numdepartam_detalle);
+        nomdet = (TextView) findViewById(R.id.et_nombre_detalle);
+        desdet = (TextView) findViewById(R.id.et_descripcion_detalle);
+        predet = (TextView) findViewById(R.id.et_precio_detalle);
+
+
 
         //Recogemos los parámetros enviados por el primer Activity a través del método getExras
         Bundle bundle = getIntent().getExtras();
@@ -48,19 +45,15 @@ public class DetalleProducto extends AppCompatActivity {
 
 
             String[] args = new String[]{codigo};
-            String sql = "Select * from Productos where codigoemp =?";
+            String sql = "Select * from Productos where codigopro =?";
             Cursor c = db.rawQuery(sql, args);
             c.moveToFirst();
 
-            coddet.setText(c.getString(c.getColumnIndexOrThrow("codigoemp")));
+            coddet.setText(c.getString(c.getColumnIndexOrThrow("codigopro")));
             nomdet.setText(c.getString(c.getColumnIndexOrThrow("nombre")));
-            apedet.setText(c.getString(c.getColumnIndexOrThrow("apellido")));
-            ofidet.setText(c.getString(c.getColumnIndexOrThrow("oficio")));
-            dirdet.setText(c.getString(c.getColumnIndexOrThrow("direccion")));
-            saldet.setText(c.getString(c.getColumnIndexOrThrow("salario")));
-            comdet.setText(c.getString(c.getColumnIndexOrThrow("comision")));
-            numdepdet.setText(c.getString(c.getColumnIndexOrThrow("numerodepartamento")));
-            fecdet.setText(c.getString(c.getColumnIndexOrThrow("fechaalta")));
+            desdet.setText(c.getString(c.getColumnIndexOrThrow("descripcion")));
+            predet.setText(c.getString(c.getColumnIndexOrThrow("precio")));
+
             db.close();
         } catch (Exception e) {
             Log.d(TAG, "ERROR: " + e.toString());

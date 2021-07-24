@@ -24,7 +24,7 @@ public class ConsultaPorNombre extends AppCompatActivity {
     private int indice1 = 0;
     private int indice2 = 0;
     private int vuelta = 0;
-    private static final String TAG = com.example.articulos_main.MainActivity.class.getSimpleName();
+    private static final String TAG = GestorProductos.class.getSimpleName();
     private Button consultar, otraconsulta, siguiente, anterior;
 
     @Override
@@ -104,6 +104,7 @@ public class ConsultaPorNombre extends AppCompatActivity {
                     conta.setText(" Registro " + indice1 + " de un total de " + indice2 +" productos");
                 } else {
                     visibilidad(false);
+                    conta.setText(" No se encontaron Registros");
                 }
 
             } catch(Exception e){
@@ -206,10 +207,10 @@ public class ConsultaPorNombre extends AppCompatActivity {
     }
 
     private void obtener(Cursor c){
-        codcxn.setText(c.getString(c.getColumnIndexOrThrow("codigoemp")));
+        codcxn.setText(c.getString(c.getColumnIndexOrThrow("codigopro")));
         nomcxn.setText(c.getString(c.getColumnIndexOrThrow("nombre")));
-        descxn.setText(c.getString(c.getColumnIndexOrThrow("apellido")));
-        precxn.setText(c.getString(c.getColumnIndexOrThrow("oficio")));
+        descxn.setText(c.getString(c.getColumnIndexOrThrow("descripcion")));
+        precxn.setText(c.getString(c.getColumnIndexOrThrow("precio")));
     }
 
 
@@ -220,5 +221,7 @@ public class ConsultaPorNombre extends AppCompatActivity {
 
     public void otraconsulta(View view) {
         consultar.setVisibility(View.VISIBLE);
+        conta.setText(" " );
+
     }
 }

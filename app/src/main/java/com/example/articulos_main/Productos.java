@@ -1,6 +1,6 @@
 package com.example.articulos_main;
 
-public class Productos {
+public class Productos{
     private int mCodigoProd,mPrecio;
     private String mNombre, mDescripcion;
 

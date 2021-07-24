@@ -55,7 +55,7 @@ public class ConsultaProducto extends AppCompatActivity {
               //int mCodigoemp,mSalario, mComision,mNumeroDepartamento;
               // String mNombre, mApellido, mOficio, mDireccion,mFechaAlta;
                 do {
-                    int codigopro = Integer.parseInt(c.getString(c.getColumnIndexOrThrow("codigoemp")));
+                    int codigopro = Integer.parseInt(c.getString(c.getColumnIndexOrThrow("codigopro")));
                     String nombre= c.getString(c.getColumnIndexOrThrow("nombre"));
                     String descripcion= c.getString(c.getColumnIndexOrThrow("descripcion")) ;
                     int precio=Integer.parseInt(c.getString(c.getColumnIndexOrThrow("precio")));

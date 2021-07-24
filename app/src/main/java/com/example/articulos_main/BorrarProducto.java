@@ -1,32 +1,40 @@
 package com.example.articulos_main;
 
+import android.content.ContentValues;
+import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class BorrarTabla extends AppCompatActivity {
-    private TextView resultadoBorrarTabla;
-    private static final String TAG = BorrarTabla.class.getSimpleName();
+
+public class BorrarProducto extends AppCompatActivity {
+    private static final String TAG = BorrarProducto.class.getSimpleName();
+    private EditText consulxid;
+    private TextView resultado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_borrar_tabla);
-        resultadoBorrarTabla = (TextView) findViewById(R.id.tv_resultadoborrartabla);
-        }
+        setContentView(R.layout.activity_borrar_producto);
+        consulxid = (EditText) findViewById(R.id.et_codigoempborraremp);
+        resultado = (TextView) findViewById(R.id.tv_resultado_borrar_empleado);
 
 
-    public void borrarTabla(View view) {
-        mostrarDialogoConfirmacionBorrado( view);
     }
 
+
+    public void borrarDato(View view ) {
+    mostrarDialogoConfirmacionBorrado(view);
+    }
 
 
     public void mostrarDialogoConfirmacionBorrado(View view) {
@@ -36,15 +44,19 @@ public class BorrarTabla extends AppCompatActivity {
 
     public void accionAceptar() {
         try {
-            mensajePersonalizado("Borrando Tabla Productos, gracias");
-            BaseDatosHelper usdbh = new BaseDatosHelper(this, "DBTienda", null, 1);
+            mensajePersonalizado("Borrando Registro, gracias");
+            String id = consulxid.getText().toString();
+            com.example.articulos_main.BaseDatosHelper usdbh = new com.example.articulos_main.BaseDatosHelper(this, "DBTienda", null, 1);
             SQLiteDatabase db = usdbh.getWritableDatabase();
-            db.execSQL("DROP TABLE IF EXISTS Productos");
-            resultadoBorrarTabla.setText("Se ha borrado correctamente la tabla ");
+            String tabla = "Productos";
+            String whereClause = "codigopro=?";
+            String[] whereArgs = new String[]{id};
+            db.delete(tabla, whereClause, whereArgs);
             db.close();
-            Log.i(TAG, "Tabla borrada , muchas gracias");
+            resultado.setText("Registro borrado , muchas gracias");
+            Log.i(TAG, "Registro borrado , muchas gracias");
 
-            Toast.makeText(this, "Tabla Productos borrada correctamente", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Registro dado de baja correctamente", Toast.LENGTH_LONG).show();
 
         } catch (Exception e) {
             Log.d(TAG, "ERROR: " + e.toString());
@@ -54,7 +66,7 @@ public class BorrarTabla extends AppCompatActivity {
     }
 
     public void accionCancelar() {
-        mensajePersonalizado("Cancelando borrado de la tabla productos de la base de datos DBTienda");
+        mensajePersonalizado("Cancelando borrado del producto");
     }
 
     public void mensajePersonalizado(String opcion) {
@@ -73,8 +85,11 @@ public class BorrarTabla extends AppCompatActivity {
     }
 
 
+
+
+
+
     public void cerrarVentana(View view) {
         finish();
     }
-
 }

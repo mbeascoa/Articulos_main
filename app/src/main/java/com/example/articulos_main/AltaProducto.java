@@ -54,7 +54,7 @@ public class AltaProducto extends AppCompatActivity {
                     if (!objetoValidar.isNumeric(codigopro) && !objetoValidar.isNumeric(preciopro)) {
                         Toast.makeText(this, "Introduzca un número , por favor", Toast.LENGTH_SHORT).show();
                     } else {
-                        mostrarDialogoConfirmacion(view);
+                        mostrarDialogoConfirmacionalta(view);
                     }
 
                 }
@@ -63,9 +63,9 @@ public class AltaProducto extends AppCompatActivity {
             }
         }
 
-    public void mostrarDialogoConfirmacion(View view) {
-        DialogoConfirmacion confirmacion  = new DialogoConfirmacion();
-        confirmacion.show(getFragmentManager(), "Cuadro confirmación");
+    public void mostrarDialogoConfirmacionalta(View view) {
+        DialogoConfirmacionAlta confirmacion  = new DialogoConfirmacionAlta();
+        confirmacion.show(getFragmentManager(), "Cuadro confirmación alta");
     }
 
     public void accionAceptar() {
@@ -80,7 +80,7 @@ public class AltaProducto extends AppCompatActivity {
             db = usdbh.getWritableDatabase();
 
             ContentValues nuevoRegistro = new ContentValues();
-            nuevoRegistro.put("codigoemp", mCodigo.getText().toString());
+            nuevoRegistro.put("codigopro", mCodigo.getText().toString());
             nuevoRegistro.put("nombre", mNombre.getText().toString());
             nuevoRegistro.put("descripcion", mDescripcion.getText().toString());
             nuevoRegistro.put("precio", mPrecio.getText().toString());
@@ -107,7 +107,7 @@ public class AltaProducto extends AppCompatActivity {
     }
 
     public void accionCancelar() {
-        mensajePersonalizado("Cancelando Envio");
+        mensajePersonalizado("Cancelando Envio ");
     }
 
     public void mensajePersonalizado(String opcion) {
