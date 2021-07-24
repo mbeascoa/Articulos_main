@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5430C1C1"
+    android:orientation="vertical"
+    android:paddingLeft="8dp"
+    android:paddingTop="16dp"
+    android:paddingRight="8dp"
+    android:paddingBottom="8dp"
+    tools:context=".ConsultaPorId">
+
+    <TextView
+        android:id="@+id/lbl_consultaporid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="CONSULTA PRODUCTO POR ID"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/et_consultaporid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Introduzca el id del producto "
+        android:inputType="number"
+        android:paddingBottom="18dp" />
+
+    <Button
+        android:id="@+id/btn_consultarporid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="consultarDatos"
+        android:text="CONSULTAR POR ID" />
+
+    <TextView
+        android:id="@+id/lbl_navegacion_empleado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="DETALLES PRODUCTO" />
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F4F2F2"
+    android:orientation="horizontal"
+    android:paddingTop="8dp">
+
+        <TextView
+            android:id="@+id/tv_codigo_consultaporid"
+            android:layout_width="24dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Código Producto" />
+
+    <TextView
+        android:id="@+id/et_codigo_consultaporid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10" />
+
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="8dp">
+
+    <TextView
+        android:id="@+id/tv_nombre_consultaporid"
+        android:layout_width="24dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Nombre Producto" />
+
+    <TextView
+        android:id="@+id/et_nombre_consultaporid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10" />
+
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F4F2F2"
+    android:orientation="horizontal"
+    android:paddingTop="8dp">
+
+    <TextView
+        android:id="@+id/tv_descripcion_consultaporid"
+        android:layout_width="24dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Descripcion" />
+
+    <TextView
+        android:id="@+id/et_descripcion_consultaporid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10" />
+
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="8dp">
+
+    <TextView
+        android:id="@+id/tv_precio_consultaporid"
+        android:layout_width="24dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Precio" />
+
+    <TextView
+        android:id="@+id/et_precio_consultaporid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10" />
+
+</LinearLayout>
+
+    <Button
+        android:id="@+id/btn_salir_consultaporid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="cerrarVentana"
+        android:text="SALIR" />
+
+</LinearLayout>
+

@@ -1,0 +1,2 @@
+rootProject.name = "Articulos_main"
+include ':app'

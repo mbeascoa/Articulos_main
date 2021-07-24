@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".BorrarTabla" >
+
+    <TextView
+        android:id="@+id/tv_resultadoborrartabla"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="36dp"
+        android:textSize="32sp" />
+
+    <Button
+        android:id="@+id/btn_borrartable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="borrarTabla"
+        android:text="BORRAR TABLA" />
+
+    <Button
+        android:id="@+id/btn_regresar_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="cerrarVentana"
+        android:text="REGRESAR" />
+</LinearLayout>

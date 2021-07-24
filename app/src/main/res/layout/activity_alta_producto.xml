@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="10dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="10dp"
+    tools:context=".AltaProducto">
+
+    <TextView
+        android:id="@+id/lbl_altaproducto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="ALTA PRODUCTO" />
+    <EditText
+        android:id="@+id/et_CodigoProducto_Alta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Introduce Código de Producto"
+        android:inputType="number" />
+    <EditText
+        android:id="@+id/et_Nombre_Alta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Introduce nombre del producto"
+        android:inputType="number" />
+    <EditText
+        android:id="@+id/et_Descripcion_Alta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Introduce descripción del producto"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/et_Precio_Alta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Introduce el precio del producto"
+        android:inputType="number" />
+    <Button
+        android:id="@+id/btn_grabaralta"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F4D8D8"
+        android:backgroundTint="#FAF9F9"
+        android:onClick="grabarBaseDatos"
+        android:text="GRABAR" />
+
+    <Button
+        android:id="@+id/btn_saliralta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="cerrarVentana"
+        android:text="VOLVER" />
+
+    <TextView
+        android:id="@+id/tv_ResultadoAlta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" />
+
+</LinearLayout>

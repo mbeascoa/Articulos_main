@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btn_crearbbdd"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_crearbasedatos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="crearBaseDatos"
+        android:text="CREAR BASE DE DATOS" />
+
+    <Button
+        android:id="@+id/btn_altaproductos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="alta"
+        android:text="ALTA PRODUCTOS" />
+
+    <Button
+        android:id="@+id/btn_consultar_productos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="consulta"
+        android:text="CONSULTA PRODUCTOS" />
+
+    <Button
+        android:id="@+id/btn_consulta_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="consultaporId"
+        android:text="CONSULTA POR ID" />
+
+    <Button
+        android:id="@+id/btn_consulta_nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="consultapornombre"
+        android:text="CONSULTA POR EL NOMBRE" />
+
+    <Button
+        android:id="@+id/btn_modificacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="modificar"
+        android:text="MODIFICACION PRODUCTOS" />
+
+    <Button
+        android:id="@+id/btn_borrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="borrarempleado"
+        android:text="BORRAR PRODUCTO" />
+
+    <Button
+        android:id="@+id/btn_borrartable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="borrartabla"
+        android:text="BORRAR TABLA" />
+
+</LinearLayout>
